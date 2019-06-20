@@ -71,8 +71,10 @@ class _LoginPageState extends State<LoginPage> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
                   FlatButton(
-                    child: Text("CANCEL",),
-                    onPressed: (){
+                    child: Text(
+                      "CANCEL",
+                    ),
+                    onPressed: () {
                       print('CANCEL!');
                       // TODO: Clear the text fields (101)
                       _usernameController.clear();
@@ -80,7 +82,9 @@ class _LoginPageState extends State<LoginPage> {
                     },
                   ),
                   RaisedButton(
-                    child: Text("NEXT",),
+                    child: Text(
+                      "NEXT",
+                    ),
                     onPressed: () {
                       print('NEXT!');
                       Navigator.pop(context);
