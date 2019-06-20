@@ -65,23 +65,29 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ), // TextField
             // TODO: Add button bar (101)
-            ButtonBar(
-              children: <Widget>[
-                FlatButton(
-                  child: Text("CANCEL",),
-                  onPressed: (){
-                    // TODO: Clear the text fields (101)
-                    _usernameController.clear();
-                    _passwordController.clear();
-                  },
-                ),
-                RaisedButton(
-                  child: Text("NEXT",),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                ),
-              ],
+            Padding(
+              padding: EdgeInsets.only(top: 16),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                  FlatButton(
+                    child: Text("CANCEL",),
+                    onPressed: (){
+                      print('CANCEL!');
+                      // TODO: Clear the text fields (101)
+                      _usernameController.clear();
+                      _passwordController.clear();
+                    },
+                  ),
+                  RaisedButton(
+                    child: Text("NEXT",),
+                    onPressed: () {
+                      print('NEXT!');
+                      Navigator.pop(context);
+                    },
+                  ),
+                ],
+              ),
             ),
           ],
         ),
